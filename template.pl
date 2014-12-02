@@ -136,6 +136,7 @@ sub main()
 	{
 		ErrorExitAndLog ("An unknown error occurred");
 	}
+	# this is a conflicting change
 }
 main();
 exit 0;
