@@ -136,6 +136,8 @@ sub main()
 	{
 		ErrorExitAndLog ("An unknown error occurred");
 	}
+	# Additional feature set 1 text here...
+	# this is an additional line on that branch
 }
 main();
 exit 0;
