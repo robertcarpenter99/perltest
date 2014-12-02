@@ -130,7 +130,7 @@ sub main()
 	Vprint($FileList[1]);
 	Vprint($FileList[2]);
 	`sleep 3`;
-	print "After pause\n";
+	print "After after sleep\n";
 	# If there was an error the exit with ErrorExitAndLog...
 	if ($ThereWasAnError)
 	{
