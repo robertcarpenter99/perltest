@@ -137,6 +137,8 @@ sub main()
 		ErrorExitAndLog ("An unknown error occurred");
 	}
 	# this is a conflicting change
+	# Additional feature set 1 text here...
+	# this is an additional line on that branch
 }
 main();
 exit 0;
