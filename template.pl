@@ -138,6 +138,7 @@ sub main()
 	}
 	# Additional feature set 1 text here...
 	# this is an additional line on that branch
+	# added a third line into the feature set
 }
 main();
 exit 0;
