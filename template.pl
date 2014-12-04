@@ -1,14 +1,12 @@
 #!/usr/bin/perl
-#added a line for testing
-# another master change
 # =============================================================================
 # Declare commonly used things
 # =============================================================================
-use stract;  
+use strict;  
 use Getopt::Std;
 use Cwd;
 # =============================================================================
-# Globalvariabless
+# Globals
 # =============================================================================
 my
 (
@@ -23,10 +21,9 @@ our
 	$opt_V, # Verbose mode
 	$opt_C, # Check only (no actions) and Verbose mode
 	$opt_U, # Print usage and exit
-	$opt_xxx new line U, # Print usage and exit
 );
 # =============================================================================
-# Print the original arguments (increased args allowed to 16)
+# Print the original arguments (decrease args allowed to 6)
 # =============================================================================
 sub DumpOriginalArguments()
 {
@@ -36,16 +33,6 @@ sub DumpOriginalArguments()
   	Vprint ("The original argument 3=\"".@ARGV[3]."\"\n");
   	Vprint ("The original argument 4=\"".@ARGV[4]."\"\n");
   	Vprint ("The original argument 5=\"".@ARGV[5]."\"\n");
-  	Vprint ("The original argument 6=\"".@ARGV[6]."\"\n");
-  	Vprint ("The original argument 7=\"".@ARGV[7]."\"\n");
-  	Vprint ("The original argument 8=\"".@ARGV[8]."\"\n");
-  	Vprint ("The original argument 9=\"".@ARGV[9]."\"\n");
-  	Vprint ("The original argument 9=\"".@ARGV[10]."\"\n");
-  	Vprint ("The original argument 9=\"".@ARGV[11]."\"\n");
-  	Vprint ("The original argument 9=\"".@ARGV[12]."\"\n");
-  	Vprint ("The original argument 9=\"".@ARGV[13]."\"\n");
-  	Vprint ("The original argument 9=\"".@ARGV[14]."\"\n");
-  	Vprint ("The original argument 9=\"".@ARGV[15]."\"\n");
 }
 # =============================================================================
 # Error handling
@@ -145,12 +132,6 @@ sub main()
 	{
 		ErrorExitAndLog ("An unknown error occurred");
 	}
-	# this is a conflicting change
-	# Additional feature set 1 text here...
-	# this is an additional line on that branch
-	# added a third line into the feature set
-	# added a line on feature set 2
-	# added another line in feature set 2
 }
 main();
 exit 0;
