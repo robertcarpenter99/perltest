@@ -23,6 +23,7 @@ our
 	$opt_V, # Verbose mode
 	$opt_C, # Check only (no actions) and Verbose mode
 	$opt_U, # Print usage and exit
+	$opt_xxx new line U, # Print usage and exit
 );
 # =============================================================================
 # Print the original arguments (increased args allowed to 16)
