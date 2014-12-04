@@ -24,7 +24,7 @@ our
 	$opt_U, # Print usage and exit
 );
 # =============================================================================
-# Print the original arguments (increased args allowed to 15)
+# Print the original arguments (increased args allowed to 16)
 # =============================================================================
 sub DumpOriginalArguments()
 {
@@ -43,6 +43,7 @@ sub DumpOriginalArguments()
   	Vprint ("The original argument 9=\"".@ARGV[12]."\"\n");
   	Vprint ("The original argument 9=\"".@ARGV[13]."\"\n");
   	Vprint ("The original argument 9=\"".@ARGV[14]."\"\n");
+  	Vprint ("The original argument 9=\"".@ARGV[15]."\"\n");
 }
 # =============================================================================
 # Error handling
