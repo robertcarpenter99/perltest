@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # =============================================================================
-# Declare commonly used things
+# Declare comonly used things
 # =============================================================================
 use strict;  
 use Getopt::Std;
