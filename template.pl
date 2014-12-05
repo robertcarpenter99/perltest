@@ -1,6 +1,6 @@
-#!/usr/bin/perl
+#!perl
 # =============================================================================
-# Declare most used things
+# Declare commonly used things
 # =============================================================================
 use strict;  
 use Getopt::Std;
@@ -23,7 +23,7 @@ our
 	$opt_U, # Print usage and exit
 );
 # =============================================================================
-# Print the original arguments (decrease args allowed to 6)
+# Print the original arguments
 # =============================================================================
 sub DumpOriginalArguments()
 {
@@ -33,6 +33,10 @@ sub DumpOriginalArguments()
   	Vprint ("The original argument 3=\"".@ARGV[3]."\"\n");
   	Vprint ("The original argument 4=\"".@ARGV[4]."\"\n");
   	Vprint ("The original argument 5=\"".@ARGV[5]."\"\n");
+  	Vprint ("The original argument 6=\"".@ARGV[6]."\"\n");
+  	Vprint ("The original argument 7=\"".@ARGV[7]."\"\n");
+  	Vprint ("The original argument 8=\"".@ARGV[8]."\"\n");
+  	Vprint ("The original argument 9=\"".@ARGV[9]."\"\n");
 }
 # =============================================================================
 # Error handling
@@ -125,8 +129,8 @@ sub main()
 	Vprint($FileList[0]);
 	Vprint($FileList[1]);
 	Vprint($FileList[2]);
-	`sleep 3`;
-	print "After after sleep\n";
+	`pause`;
+	print "After pause\n";
 	# If there was an error the exit with ErrorExitAndLog...
 	if ($ThereWasAnError)
 	{
@@ -136,3 +140,4 @@ sub main()
 main();
 exit 0;
 __END__
+
