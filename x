@@ -1,0 +1,2 @@
+clear
+perl splunktest.pl $*
