@@ -125,25 +125,29 @@ sub are_there_any_machine_names($$)
 				#$machineID =~ s/^.*splunk-//; TOO GREEDY
 				$machineID =~ s/[^splunk-]*//;
 				$machineID =~ s/splunk-//;
-				print $machineID."\n";
-				if ($printNames)
+				$machineID =~ s/-.*//;
+				Vprint ("\n".$machineID." has ".length($machineID)." characters\n");
+				if (length($machineID) <= 15)
 				{
-					if (/^splunk-[a-zA-Z]+-[0-9]+$/)
+					if ($printNames)
 					{
-						print "The line \"".$_."\" is a splunk machine name.\n";
+						if (/^splunk-[a-zA-Z]+-[0-9]+$/)
+						{
+							print "The line \"".$_."\" is a splunk machine name.\n";
+						}
+						elsif (/\s*splunk-[a-zA-Z]+-[0-9]+\s*/)
+						{
+							print "The line \"".$_."\" is a splunk machine name with white space.\n";
+						}
+						else
+						{
+							print "The line \"".$_."\" contains a splunk machine name.\n";
+						}
+						
+						
 					}
-					elsif (/\s*splunk-[a-zA-Z]+-[0-9]+\s*/)
-					{
-						print "The line \"".$_."\" is a splunk machine name with white space.\n";
-					}
-					else
-					{
-						print "The line \"".$_."\" contains a splunk machine name.\n";
-					}
-					
-					
+					$were_there_codes=1;
 				}
-				$were_there_codes=1;
 			}
 			else
 			{
